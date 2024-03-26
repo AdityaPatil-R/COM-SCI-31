@@ -107,5 +107,5 @@ assert(test2.getToCity() == "Tokyo");
 assert(to_string(test2.getMileage()) == "500.000000");
 assert(test2.getName() == "Passenger");
 
-The above code was used to test if the flight was correctly modified after being confirmed to be a free flight added to the account.
+The above code was used to test if the flight was correctly modified after being confirmed to be a free flight that was added to the account.
 Because it correctly passed the assert statements, all relevant details were correctly added, so the freeFlight function works properly.
