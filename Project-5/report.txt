@@ -1,0 +1,111 @@
+Name: Aditya Patil
+UCLA ID Number: 406216539
+
+*****************
+Notable Obstacles
+*****************
+
+The first notable obstacle was figuring out how to start, as I had never made multiple class projects in c++ before.
+Looking at the FAQ and the class diagrams in addition to reviewing lecture slides helped me get a good start to the project.
+
+The second notable obstacle was understanding the design of the complex functions in FrequentFlyerAccount.
+I solved this by doing multiple re-reads of the spec, looking through the Piazza, and experimenting with various implementations.
+Eventually, I figured out the exact details behind what each of them were supposed to do, and implemented them shortly afterwards.
+
+The last notable obstacle was testing my program, as I thought that I had to make all the test cases on my own.
+After realizing that there were some test cases given to us on the spec and through Piazza, I found it much simpler to create my own.
+I soon made a list of test cases to exhaustively test the program, and they are listed below.
+
+*********
+Test Data
+*********
+
+PlaneFlight test1("Passenger", "Los Angeles", "New York", 1000.00, 500.00);
+assert(to_string(test1.getCost()) == "1000.000000");
+assert(to_string(test1.getMileage()) == "500.000000");
+assert(test1.getName() == "Passenger");
+assert(test1.getFromCity() == "Los Angeles");
+assert(test1.getToCity() == "New York");
+
+The above code was used to declare a standard PlaneFlight and ensure that it works as intended.
+Because it correctly passed the assert statements, the functions worked as they should on a standard PlaneFlight.
+
+test1.setCost(-1000);
+test1.setMileage(0);
+test1.setName("");
+test1.setFromCity("New York");
+test1.setToCity("Los Angeles");
+
+assert(to_string(test1.getCost()) == "-1.000000");
+assert(to_string(test1.getMileage()) == "-1.000000");
+assert(test1.getName() == "Passenger");
+assert(test1.getFromCity() == "Los Angeles");
+assert(test1.getToCity() == "New York");
+
+The above code was used to test if calling the getter functions worked as intended on a non-standard PlaneFlight.
+Becuase it correctly passed the assert statements, the functions worked as they should on a non-standard PlaneFlight.
+
+test1.setFromCity("");
+test1.setToCity("");
+
+assert(test1.getFromCity() == "Los Angeles");
+assert(test1.getToCity() == "New York");
+
+The above code was used to test if the functions would swap the cities if prompted to, even though they shouldn't.
+Because it correctly passed the assert statements, the functions worked as they should by not allowing the same fromCity and toCity.
+
+PlaneFlight test2("Passenger", "Los Angeles", "New York", 1000.00, 500.00);
+FrequentFlyerAccount account1("Passenger");
+FrequentFlyerAccount account2("");
+
+assert(to_string(account1.getBalance()) == "0.000000");
+assert(to_string(account2.getBalance()) == "0.000000");
+
+The above code was used to test if the mileage balances were correctly instantiated to 0 for the FrequentFlyerAccounts.
+Because it correctly passed the assert statements, the mileage balance initialization works as intended.
+
+assert(account1.getName() == "Passenger");
+assert(account2.getName() == "");
+
+The above code was used to test if the getter function for the names of the account holders returns the correct name.
+Because it correctly passed the assert statements, the getter function for the account holder names works as intended.
+
+assert(account1.addFlightToAccount(test2) == true);
+assert(account2.addFlightToAccount(test2) == false);
+
+The above code was used to test if the PlaneFlights would only be added to the account if the names matched.
+Because it correctly passed the assert statements, the function correctly verifies this requirement.
+
+assert(to_string(account1.getBalance()) == "500.000000");
+
+The above code was used to test if the balance would be decreased correctly when the flight was added to the account.
+Because it correctly passed the assert statements, the function correctly decremented the mileage balance when added to the account.
+
+assert(account1.canEarnFreeFlight(1000.00) == false);
+assert(account1.canEarnFreeFlight(500.00) == true);
+assert(account1.canEarnFreeFlight(250.00) == true);
+assert(account1.canEarnFreeFlight(0.00) == false);
+assert(account1.canEarnFreeFlight(-500.00) == false);
+
+assert(account2.canEarnFreeFlight(500.00) == false);
+assert(account2.canEarnFreeFlight(0.00) == false);
+assert(account2.canEarnFreeFlight(-500.00) == false);
+
+The above code was used to test a variety of mileages to see if they would denote whether the person can get a free flight or not.
+Because it correctly passed the assert statements, the function works on a complete range of numerical inputs.
+
+assert(account1.freeFlight("Tokyo", "Tokyo", 1000.00, test2) == false);
+assert(account1.freeFlight("", "", 500.00, test2) == false);
+assert(account1.freeFlight("Paris", "Tokyo", 500.00, test2) == true);
+assert(account2.freeFlight("Paris", "Tokyo", 1000.00, test2) == false);
+
+The above code was used to test whether certain flights would be considered free for the account or not based on the inputs.
+Because it correctly passed the assert statements, on multiple correct and incorrect inputs, the function works for a wide range of values.
+
+assert(test2.getFromCity() == "Paris");
+assert(test2.getToCity() == "Tokyo");
+assert(to_string(test2.getMileage()) == "500.000000");
+assert(test2.getName() == "Passenger");
+
+The above code was used to test if the flight was correctly modified after being confirmed to be a free flight that was added to the account.
+Because it correctly passed the assert statements, all relevant details were correctly added, so the freeFlight function works properly.
