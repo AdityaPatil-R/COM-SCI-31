@@ -1,0 +1,29 @@
+Name: Aditya Patil
+UCLA ID Number: 406216539
+Inputs (Step 5)
+One combination of input integers that produced a nonsensical result was 0 for totalVoters, -10 for republicanVotes, and 10 for democraticVotes.
+This is nonsensical because the program outputs infinite percentages for the parties, which can't actually happen.
+Another combination of input integers that produced a nonsensical result was 0 for totalVoters, 0 for republicanVotes, and 0 for democraticVotes.
+This is nonsensical because it resulted in the program outputting that nan% of voters voted for each party, which is incorrect, as they aren't even numbers.
+One last combination of input integers that produced a nonsensical result was 10 for totalVoters, -20 for republicanVotes, and 30 for democraticVotes.
+This is nonsensical because it outputs percentages that are negative or above 100%, which aren't logically possible.
+The flaw in the program that allowed these nonsensical results to be possible is the condition: republicanVotes + democraticVotes == totalVoters.
+There was no code to check that more than zero people voted, or if the amount of people that voted was a negative number.
+Therefore, any combination of numbers could be inputted for republicanVotes and democraticVotes so long as their sum was totalVoters.
+Logic Error (Step 6)
+The logic error I produced was replacing 100.0 with 100 in the initializations of the pctRepub and pctDemoc variables.
+This caused all the outputted percentages to end with .0, regardless of the input, which removed the single decimal point accuracy of the percentages.
+An example would be the inputs: totalVoters = 89, republicanVotes = 43, and democraticVotes = 46.
+The outputs for these inputs will be 48.0% and 51.0% for the Republican and Democratic party candidates, respectively.
+However, they should have been 48.3% and 51.7%, but the logic error introduced causes incorrect percentages to be produced.
+Because the error introduced produces incorrect results (Ones that don't add up to 100%) from reasonable inputs, it is a logic error.
+Compile Errors (Step 7)
+The first compile error I produced was removing a semicolon from cout << endl;.
+In C++, statements must be ended with a semicolon so the compiler recognizes when they end.
+Because a semicolon is missing, the compiler won't know where the statement ends, so it will fail to compile the code.
+The second compile error I produced was changing the <<'s in a print statement to >>'s.
+In C++, << is supposed to be used in print statements, not >>.
+This incorrect syntax makes it so that the compiler fails to print the statement, as it can't compile the code.
+
+
+
