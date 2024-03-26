@@ -1,0 +1,131 @@
+Name: Aditya Patil
+UCLA ID Number: 406216539
+
+Notable obstacles overcome
+------------------
+One obstacle I overcame was the issue of figuring out how handle inputs of multiple words separated by spaces.
+I originally used cin >>, but that didn't work, so I had to use the getline function.
+That required me to learn how it worked and also how to use cin.ignore along with it.
+
+Another obstacle I overcame was when I was stuck for multiple days with 49/50 test cases met.
+I had to comb through each line in my code nearly a dozen times to check every single number and string.
+I eventually found an extra space when I was checking New Jersey, and fixed that to meet all 50 test cases.
+
+Test data (All test cases were handled correctly)
+---------
+Test case 1 (No errors on a taxed and levied day):
+State Name: California
+Purchase amount: 50
+Provide the month: June
+Provide the day: 23
+Provide the year: 2000
+Please pay a total of $54.78
+Used this test case to verify that the program could take in the inputs and correctly output it accounting for that state's taxes as well as its levy.
+
+Test case 2: (Non capitalized state name)
+State Name: kentucky
+Purchase amount: 50
+Provide the month: June
+Provide the day: 23
+Provide the year: 2000
+Invalid state!
+Used this test case to verify that the program could properly handle the error of a non capitalized state.
+
+Test case 3 (Negative purchase amount):
+State Name: Kentucky
+Purchase amount: -50
+Provide the month: June
+Provide the day: 23
+Provide the year: 2000
+Invalid amount!
+Used this test case to verify that the program could properly handle the error of a negative amount.
+
+Test case 4 (Non capitalized month):
+State Name: Kentucky
+Purchase amount: 50
+Provide the month: june
+Provide the day: 23
+Provide the year: 2000
+Invalid month!
+Used this test case to verify that the program could properly handle the error of a non capitalized month.
+
+Test case 5 (Day out of range):
+State Name: Kentucky
+Purchase amount: 50
+Provide the month: June
+Provide the day: 55
+Provide the year: 2000
+Invalid day!
+Used this test case to verify that the program could properly handle the error of a day not possible in a month.
+
+Test case 6 (Year out of range):
+State Name: Kentucky
+Purchase amount: 50
+Provide the month: June
+Provide the day: 23
+Provide the year: 9999
+Invalid year!
+Used this test case to verify that the program could properly handle the error of a year larger than is allowed.
+
+Test case 7 (Number for month instead of string):
+State Name: Kentucky
+Purchase amount: 50
+Provide the month: 7
+Provide the day: 23
+Provide the year: 2000
+Invalid month!
+Used this test case to verify that the program could properly handle the error of a numerical input where a string was expected.
+
+Test case 8 (String for amount instead of number):
+State Name: Kentucky
+Purchase amount: One hundred dollars
+Provide the month: June
+Provide the day: 23
+Provide the year: 2000
+Invalid amount!
+Used this test case to verify that the program could properly handle the error of a string input where a number was expected.
+
+Test case 9 (Multiple errors):
+State Name: kentucky
+Purchase amount: -50
+Provide the month: june
+Provide the day: 55
+Provide the year: 9999
+Invalid state!
+Used this test case to verify that the program could properly handle multiple errors by outputting based only on the first one.
+
+Test case 10 (Multiple words in one input):
+State Name: Kentucky Kentucky
+Purchase amount: 50
+Provide the month: June
+Provide the day: 23
+Provide the year: 2000
+Invalid state!
+Used this test case to verify that the program would correctly identify an error when the state's name is typed twice, and doesn't take the second word to be the input for the next prompt.
+
+Test case 11 (No errors on an untaxed day):
+State Name: West Virginia
+Purchase amount: 50
+Provide the month: August
+Provide the day: 6
+Provide the year: 2000
+Please pay a total of $50.00
+Used this test case to verify that the program would correctly output a payment with no tax on a tax free day.
+
+Test case 12 (Misspelled state name):
+State Name: Kntcky
+Purchase amount: 50
+Provide the month: June
+Provide the day: 23
+Provide the year: 2000
+Invalid state!
+Used this test case to verify that the program would correctly identify an error for a misspelled state name.
+
+Test case 13 (Misspelled month):
+State Name: Kentucky
+Purchase amount: 50
+Provide the month: Jine
+Provide the day: 23
+Provide the year: 2000
+Invalid month!
+Used this test case to verify that the program would correctly identify an error for a misspelled month.

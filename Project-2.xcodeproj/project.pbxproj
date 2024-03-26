@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B5E1AC742BB21C5C0075191E /* payment.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5E1AC732BB21C5C0075191E /* payment.cpp */; };
+		B5EF733D2BB2639F0001BD4F /* payment.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5EF733C2BB2639F0001BD4F /* payment.cpp */; };
+		B5EF733F2BB263B30001BD4F /* report.txt in Sources */ = {isa = PBXBuildFile; fileRef = B5EF733E2BB263B30001BD4F /* report.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,8 +25,8 @@
 
 /* Begin PBXFileReference section */
 		B5E1AC672BB21BF80075191E /* Project-2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Project-2"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B5E1AC732BB21C5C0075191E /* payment.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = payment.cpp; path = "../../COM-SCI-31/Zip Files/Project2/payment.cpp"; sourceTree = "<group>"; };
-		B5E1AC752BB21C9E0075191E /* report.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = report.txt; path = "../../COM-SCI-31/Zip Files/Project2/report.txt"; sourceTree = "<group>"; };
+		B5EF733C2BB2639F0001BD4F /* payment.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = payment.cpp; sourceTree = "<group>"; };
+		B5EF733E2BB263B30001BD4F /* report.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = report.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +59,8 @@
 		B5E1AC692BB21BF80075191E /* Project-2 */ = {
 			isa = PBXGroup;
 			children = (
-				B5E1AC732BB21C5C0075191E /* payment.cpp */,
-				B5E1AC752BB21C9E0075191E /* report.txt */,
+				B5EF733C2BB2639F0001BD4F /* payment.cpp */,
+				B5EF733E2BB263B30001BD4F /* report.txt */,
 			);
 			path = "Project-2";
 			sourceTree = "<group>";
@@ -121,7 +122,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5E1AC742BB21C5C0075191E /* payment.cpp in Sources */,
+				B5EF733D2BB2639F0001BD4F /* payment.cpp in Sources */,
+				B5EF733F2BB263B30001BD4F /* report.txt in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
