@@ -1,0 +1,93 @@
+Name: Aditya Patil
+UCLA ID Number: 406216539
+
+**************************
+Notable Obstacles Overcome
+**************************
+
+The first notable obstacle that I faced in this project was figuring out how to start.
+I looked at the video, and that helped me get an idea for what to do, and also had to re-read the spec multiple times.
+
+The second notable obstacle that I faced in this project was figuring out how to implement the humanPlay and computerPlay functions.
+I had to ask my TA for advice, and also check Piazza to see what they were supposed to do.
+I also had to refresh my knowledge of enums to figure out how to convert the die roll to a body part.
+
+*********
+Test Data
+*********
+
+    BeetleGame game;
+    game.humanRoll(6);
+    assert(game.humanPlay() == true);
+    assert(game.humanPlay() == false);
+    
+    game.humanRoll(5);
+    assert(game.humanPlay() == true);
+    assert(game.humanPlay() == false);
+    
+    game.humanRoll(4);
+    assert(game.humanPlay() == true);
+    assert(game.humanPlay() == false);
+    
+    game.humanRoll(3);
+    assert(game.humanPlay() == true);
+    assert(game.humanPlay() == true);
+    assert(game.humanPlay() == true);
+    assert(game.humanPlay() == true);
+    assert(game.humanPlay() == false);
+    
+    game.humanRoll(2);
+    assert(game.humanPlay() == true);
+    assert(game.humanPlay() == true);
+    assert(game.humanPlay() == false);
+    
+    game.humanRoll(1);
+    assert(game.humanPlay() == true);
+    assert(game.humanPlay() == true);
+    assert(game.humanPlay() == false);
+I used this test data to ensure that the function wouldn't return true when prompted to build something that it already built.
+Since it passed all the test cases, I know that it works as intended.
+
+    game.humanRoll(-1);
+    assert(game.humanPlay() == false);
+    
+    game.humanRoll(-100);
+    assert(game.humanPlay() == false);
+    
+    game.humanRoll(7);
+    assert(game.humanPlay() == false);
+    
+    game.humanRoll(100);
+    assert(game.humanPlay() == false);
+I used this test data to ensure that no body parts would be built if the roll wasn't 1, 2, 3, 4, 5, or 6.
+Since it passed all the test cases, I nkow that it works as intended.
+
+    Beetle b;
+    assert( b.hasLeg1() == false );
+    assert( b.hasLeg2() == false );
+    assert( b.hasLeg3() == false );
+    assert( b.hasLeg4() == false );
+    assert( b.isComplete() == false );
+    b.buildLeg();
+    assert( b.hasLeg1() );
+    assert( b.hasLeg2() == false );
+    assert( b.hasLeg3() == false );
+    assert( b.hasLeg4() == false );
+    b.buildLeg( );
+    assert( b.hasLeg1() );
+    assert( b.hasLeg2() );
+    assert( b.hasLeg3() == false );
+    assert( b.hasLeg4() == false );
+    b.buildLeg( );
+    assert( b.hasLeg1() );
+    assert( b.hasLeg2() );
+    assert( b.hasLeg3() );
+    assert( b.hasLeg4() == false );
+    b.buildLeg();
+    assert( b.hasLeg1() );
+    assert( b.hasLeg2() );
+    assert( b.hasLeg3() );
+    assert( b.hasLeg4() );
+    assert( b.isComplete( ) == false );
+I used this test data to ensure that the legs were built sequentially, as they were supposed to be done.
+Since it passed all the test cases, I nkow that it works as intended.
