@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B5EF737B2BB26D8E0001BD4F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5EF737A2BB26D8E0001BD4F /* main.cpp */; };
+		B5EF73832BB26DC20001BD4F /* FrequentFlyerAccount.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5EF73812BB26DC20001BD4F /* FrequentFlyerAccount.cpp */; };
+		B5EF73862BB26DFC0001BD4F /* PlaneFlight.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5EF73842BB26DFC0001BD4F /* PlaneFlight.cpp */; };
+		B5EF73882BB26E330001BD4F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5EF73872BB26E330001BD4F /* main.cpp */; };
+		B5EF738A2BB26E600001BD4F /* report.txt in Sources */ = {isa = PBXBuildFile; fileRef = B5EF73892BB26E600001BD4F /* report.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +27,12 @@
 
 /* Begin PBXFileReference section */
 		B5EF73772BB26D8E0001BD4F /* Project-5 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Project-5"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B5EF737A2BB26D8E0001BD4F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		B5EF73812BB26DC20001BD4F /* FrequentFlyerAccount.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FrequentFlyerAccount.cpp; sourceTree = "<group>"; };
+		B5EF73822BB26DC20001BD4F /* FrequentFlyerAccount.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FrequentFlyerAccount.h; sourceTree = "<group>"; };
+		B5EF73842BB26DFC0001BD4F /* PlaneFlight.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PlaneFlight.cpp; sourceTree = "<group>"; };
+		B5EF73852BB26DFC0001BD4F /* PlaneFlight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlaneFlight.h; sourceTree = "<group>"; };
+		B5EF73872BB26E330001BD4F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		B5EF73892BB26E600001BD4F /* report.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = report.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +65,12 @@
 		B5EF73792BB26D8E0001BD4F /* Project-5 */ = {
 			isa = PBXGroup;
 			children = (
-				B5EF737A2BB26D8E0001BD4F /* main.cpp */,
+				B5EF73892BB26E600001BD4F /* report.txt */,
+				B5EF73872BB26E330001BD4F /* main.cpp */,
+				B5EF73842BB26DFC0001BD4F /* PlaneFlight.cpp */,
+				B5EF73852BB26DFC0001BD4F /* PlaneFlight.h */,
+				B5EF73812BB26DC20001BD4F /* FrequentFlyerAccount.cpp */,
+				B5EF73822BB26DC20001BD4F /* FrequentFlyerAccount.h */,
 			);
 			path = "Project-5";
 			sourceTree = "<group>";
@@ -119,7 +132,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5EF737B2BB26D8E0001BD4F /* main.cpp in Sources */,
+				B5EF73832BB26DC20001BD4F /* FrequentFlyerAccount.cpp in Sources */,
+				B5EF73882BB26E330001BD4F /* main.cpp in Sources */,
+				B5EF73862BB26DFC0001BD4F /* PlaneFlight.cpp in Sources */,
+				B5EF738A2BB26E600001BD4F /* report.txt in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
