@@ -6,7 +6,7 @@ Notable obstacles
 *****************
 
 One notable obstacle was figuring out how to return the smallest index for locateMaximum if the highest value string repeated.
-I realized that I could iterate from the n-1 to 0 instead of 0 to n-1.
+I realized that I could iterate from n-1 to 0 instead of 0 to n-1.
 This would make it so that I would always get the occurence of the highest value string that had the smallest index
 
 Another notable obstacle that I had was figuring out how to determine if a string was a floating point value.
