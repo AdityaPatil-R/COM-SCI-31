@@ -99,7 +99,7 @@ assert(account1.freeFlight("", "", 500.00, test2) == false);
 assert(account1.freeFlight("Paris", "Tokyo", 500.00, test2) == true);
 assert(account2.freeFlight("Paris", "Tokyo", 1000.00, test2) == false);
 
-The above code was used to test whether or not certain flights would be considered free for the account or not based on the inputs.
+The above code was used to test whether certain flights would be considered free for the account or not based on the inputs.
 Because it correctly passed the assert statements, on multiple correct and incorrect inputs, the function works for a wide range of values.
 
 assert(test2.getFromCity() == "Paris");
