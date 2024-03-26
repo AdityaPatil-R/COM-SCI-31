@@ -63,31 +63,31 @@ I used this test data to ensure that no body parts would be built if the roll wa
 Since it passed all the test cases, I nkow that it works as intended.
 
     Beetle b;
-    assert( b.hasLeg1() == false );
-    assert( b.hasLeg2() == false );
-    assert( b.hasLeg3() == false );
-    assert( b.hasLeg4() == false );
-    assert( b.isComplete() == false );
+    assert(b.hasLeg1() == false);
+    assert(b.hasLeg2() == false);
+    assert(b.hasLeg3() == false);
+    assert(b.hasLeg4() == false);
+    assert(b.isComplete() == false);
     b.buildLeg();
-    assert( b.hasLeg1() );
-    assert( b.hasLeg2() == false );
-    assert( b.hasLeg3() == false );
-    assert( b.hasLeg4() == false );
-    b.buildLeg( );
-    assert( b.hasLeg1() );
-    assert( b.hasLeg2() );
-    assert( b.hasLeg3() == false );
-    assert( b.hasLeg4() == false );
-    b.buildLeg( );
-    assert( b.hasLeg1() );
-    assert( b.hasLeg2() );
-    assert( b.hasLeg3() );
-    assert( b.hasLeg4() == false );
+    assert(b.hasLeg1());
+    assert(b.hasLeg2() == false);
+    assert(b.hasLeg3() == false);
+    assert(b.hasLeg4() == false);
     b.buildLeg();
-    assert( b.hasLeg1() );
-    assert( b.hasLeg2() );
-    assert( b.hasLeg3() );
-    assert( b.hasLeg4() );
-    assert( b.isComplete( ) == false );
+    assert(b.hasLeg1());
+    assert(b.hasLeg2());
+    assert(b.hasLeg3() == false);
+    assert(b.hasLeg4() == false);
+    b.buildLeg();
+    assert(b.hasLeg1());
+    assert(b.hasLeg2());
+    assert(b.hasLeg3());
+    assert(b.hasLeg4() == false);
+    b.buildLeg();
+    assert(b.hasLeg1());
+    assert(b.hasLeg2());
+    assert(b.hasLeg3());
+    assert(b.hasLeg4());
+    assert(b.isComplete() == false);
 I used this test data to ensure that the legs were built sequentially, as they were supposed to be done.
 Since it passed all the test cases, I nkow that it works as intended.
