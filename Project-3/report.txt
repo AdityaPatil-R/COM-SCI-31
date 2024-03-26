@@ -6,7 +6,7 @@ Notable Obstacles
 *****************
 
 Figuring out how to split the QC test results into batches
-After lots of trial and error, I realized that I had to use a while loop to find where Q appeared, and then split it up that way to then sent to the isValidBatch function.
+After lots of trial and error, I realized that I had to use a while loop to find where Q appeared, and then split it up that way to then send to the isValidBatch function.
 
 Figuring out how to check for leading zeroes
 I figured out that I could convert the number back to a string and check it with the original extracted substring, and if they didn’t match, there were leading zeroes
