@@ -11,8 +11,8 @@
 		B5EF73A32BB28E870001BD4F /* BeetleDrawing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5EF73A12BB28E870001BD4F /* BeetleDrawing.cpp */; };
 		B5EF73A62BB295B30001BD4F /* BeetleGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5EF73A42BB295B30001BD4F /* BeetleGame.cpp */; };
 		B5EF73AB2BB295FE0001BD4F /* Die.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5EF73A92BB295FE0001BD4F /* Die.cpp */; };
-		B5EF73AD2BB2962F0001BD4F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5EF73AC2BB2962F0001BD4F /* main.cpp */; };
 		B5EF73AF2BB2964B0001BD4F /* report.txt in Sources */ = {isa = PBXBuildFile; fileRef = B5EF73AE2BB2964B0001BD4F /* report.txt */; };
+		B5EF73B32BB2A1580001BD4F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5EF73B22BB2A1580001BD4F /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,8 +37,8 @@
 		B5EF73A52BB295B30001BD4F /* BeetleGame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BeetleGame.h; sourceTree = "<group>"; };
 		B5EF73A92BB295FE0001BD4F /* Die.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Die.cpp; sourceTree = "<group>"; };
 		B5EF73AA2BB295FE0001BD4F /* Die.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Die.h; sourceTree = "<group>"; };
-		B5EF73AC2BB2962F0001BD4F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = ../main.cpp; sourceTree = "<group>"; };
 		B5EF73AE2BB2964B0001BD4F /* report.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = report.txt; sourceTree = "<group>"; };
+		B5EF73B22BB2A1580001BD4F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +71,6 @@
 		B5EF73962BB28E340001BD4F /* Project-6 */ = {
 			isa = PBXGroup;
 			children = (
-				B5EF73AC2BB2962F0001BD4F /* main.cpp */,
 				B5EF73AE2BB2964B0001BD4F /* report.txt */,
 				B5EF73A92BB295FE0001BD4F /* Die.cpp */,
 				B5EF739F2BB28E5D0001BD4F /* Beetle.h */,
@@ -81,6 +80,7 @@
 				B5EF73A52BB295B30001BD4F /* BeetleGame.h */,
 				B5EF73A42BB295B30001BD4F /* BeetleGame.cpp */,
 				B5EF73AA2BB295FE0001BD4F /* Die.h */,
+				B5EF73B22BB2A1580001BD4F /* main.cpp */,
 			);
 			path = "Project-6";
 			sourceTree = "<group>";
@@ -144,7 +144,7 @@
 			files = (
 				B5EF73A02BB28E5D0001BD4F /* Beetle.cpp in Sources */,
 				B5EF73A32BB28E870001BD4F /* BeetleDrawing.cpp in Sources */,
-				B5EF73AD2BB2962F0001BD4F /* main.cpp in Sources */,
+				B5EF73B32BB2A1580001BD4F /* main.cpp in Sources */,
 				B5EF73AB2BB295FE0001BD4F /* Die.cpp in Sources */,
 				B5EF73A62BB295B30001BD4F /* BeetleGame.cpp in Sources */,
 				B5EF73AF2BB2964B0001BD4F /* report.txt in Sources */,
