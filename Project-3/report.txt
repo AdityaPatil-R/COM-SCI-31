@@ -1,0 +1,114 @@
+Name: Aditya Patil
+UCLA ID Number: 406216539
+
+*****************
+Notable Obstacles
+*****************
+
+Figuring out how to split the QC test results into batches
+After lots of trial and error, I realized that I had to use a while loop to find where Q appeared, and then split it up that way to then sent to the isValidBatch function.
+
+Figuring out how to check for leading zeroes
+I figured out that I could convert the number back to a string and check it with the original extracted substring, and if they didn’t match, there were leading zeroes
+
+Figuring out how to count the defects and passes.
+I kept getting errors that said I was trying to convert letters to integers, and I realized I had to check an extra case, because the string could have p and d in any order.
+
+
+*****************************************
+Program Design (Pseudocode for functions)
+*****************************************
+
+Helper Functions
+
+int findInstance(string s, string str, int index);
+For each string of size s in str
+If that string is equal to s, return the index at which this happened
+If there’s no such case, return -1
+
+int totalInstances(string s, string str);
+For each string of size s in str
+If that string is equal to s, increment a counter by one
+Return the value of the counter
+
+bool isValidBatch(string batch);
+If the batch doesn’t have p and d, or has more than one instance of p and d, or if the first letter isn’t Q
+Return false
+Create strings to represent the letters and number sequences
+If there aren’t numbers after the letters, or if the letters aren’t the correct ones, or if p and d don’t sum to Q, or if the number after Q is zero, or if there are leading zeroes
+Return false
+Return true if none of the rules are violated
+
+int passOrDefect(char c, string results);
+Loop through results until c is found
+Then, determine whether the next letter is Q, d, or p
+Loop through the string until you reach that, and convert that region to a number added to a running sum
+Return the running sum
+
+Main Functions
+
+bool isValidQC(string results);
+If results is smaller than 6 letters or the first letter isn’t Q
+Return false
+If not, loop through results until Q is found
+Set an int end to the index of the next Q
+If this is the last Q, set end to the end of results
+Call isValidBatch on the substring from index to end of results
+If it is false, return false
+Set index to end to get the next batch
+If the character at the current index wasn’t Q, increment it until Q is reached
+If the end is reached, return true, as no errors were found
+
+int passQC(string results);
+If results is valid
+Return passOrDefect(‘p’, results)
+Return –1 if invalid
+
+int defectQC(string results);
+If results is valid
+Return passOrDefect(‘d’, results)
+Return –1 if invalid
+
+int totalQC(string results);
+If results is valid
+Return passQc(results) + defectQC(results)
+Return –1 if invalid
+
+int batches(string results);
+If the result is valid
+Return totalInstances(“Q”, results)
+Return –1 if invalid
+
+*********
+Test Data
+*********
+
+“Q3p2d1”
+Tested to see if the program could correctly handle a single standard batch, and it did
+
+“Q8d4p4Q9p2d7”
+Tested to see if the program could correctly handle multiple batches, and it did
+
+“”
+Tested to see if the program could correctly handle an empty string, and it did
+
+“Q29d17p12”
+Tested to see if the program could correctly handle double digit numbers, and it did
+
+“q15p8d7”
+Tested to see if the program could correctly handle a lowercase q, and it did.
+
+“Q0003p002d000001”
+Tested to see if the program could correctly handle leading zeroes, and it did.
+
+“Q18p4d6”
+Tested to see if the program could correctly handle an incorrect sum, and it did.
+
+“Q0p0d0”
+Tested to see if the program could correctly handle a 0 after Q, and it did
+
+“qpd”
+Tested to see if the program could correctly handle no numbers, and it did
+
+“109342”
+Tested to see if the program could correctly handle no letters, and it did
