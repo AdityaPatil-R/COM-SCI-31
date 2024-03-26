@@ -1,0 +1,68 @@
+Name: Aditya Patil
+UCLA ID Number: 406216539
+
+*****************
+Notable obstacles
+*****************
+
+One notable obstacle was figuring out how to return the smallest index for locateMaximum if the highest value string repeated.
+I realized that I could iterate from n-1 to 0 instead of 0 to n-1.
+This would make it so that I would always get the occurence of the highest value string that had the smallest index
+
+Another notable obstacle that I had was figuring out how to determine if a string was a floating point value.
+I had to go step by step through the part of the spec that described the function and figure out how to implement every capability.
+When that didn't work, I had to thoroughly test the function before I found out what the problem was, and then I solved it.
+
+One last notable obstacle that I had was figuring out how replace strings with placeholder in the shiftLeft function.
+I struggled with finding the bounds for my second nested for loop, as I kept forgetting that it was 0-indexed.
+I eventually realized that I had to replace the string indexed at n - i - 1 instead of n - i, and that solved my problem.
+
+*********
+Test data
+*********
+
+string test1[5] = {"1312", "362", "64", "11111", "9"};
+assert(locateMaximum(test1, 5) == 4);
+This test case was used to make sure that the function could properly locate the string with maximum value.
+Since this didn't cause an error, I knew that locateMaximum worked properly on an array of numbers represented as strings.
+
+string test2[4] = {"hello", "5913", "World", "stupid5"};
+assert(locateMaximum(test2, 3) == 0);
+This test case was used to make sure that the function could properly locate the string with maximum value for mixtures of letters and numbers.
+Additionally, it was used to see if the function would properly ignore the last string based on the second parameter's bounds.
+Since this didn't cause an error, I knew that locateMaximum worked properly on an array of numbers and letters, and iterated properly according to n.
+
+string test3[5] = {"1312", "362", "64", "11111", "9"};
+assert(countFloatingPointValues(test3, 5) == 5);
+This test case was used to make sure that the function could properly count floating point values in an array of normal numbers.
+Since this didn't cause an error, I knew that countFloatingPointvalues worked properly on an array of standard numbers represented as strings.
+
+string test4[5] = {"13.5", "2+6", "79-32", "1,2,3", "03.4.1"};
+assert(countFloatingPointValues(test4, 5) == 1);
+This test case was used to make sure the function could properly handle decimal points, plus and minus signs, and commas.
+It properly identified that plus signs, minus signs, commas, and multiple decimal points don't count as floating point values.
+Since it properly identified only the first string as a floating pont value, I knew countFloatingPointValues worked on these specific cases.
+
+string test5[5] = {"this1", "class2", "is3", "so4", "fun5"};
+assert(hasNoCapitals(test5, 5) == true);
+This test case was used ot make sure the function could properly handle lowercase letters and numbers.
+Since it properly identified no string as having capitals, I knew hasNoCapitals worked on lowercase letters and numbers.
+
+string test6[5] = {"This", "Class", "Is", "So", "Fun"};
+assert(hasNoCapitals(test6, 5) == false);
+This test case was used to make sure the function could properly handle uppercase letters.
+Since it properly identified the array as having capital letters, I knew hasNoCapitals could properly detect capital letters.
+
+string test7[5] = {"fio23j", "FOI&23l", "jfoiWW7", "+fjo&#-", "*@fja_?"};
+assert(shiftLeft(test7, 5, 10, "testing") == 5);
+cout << test7[0] + " " + test7[1] + " " + test7[2] + " " + test7[3] + " " + test7[4] << endl;
+assert("testing testing testing testing testing" == test7[0] + " " + test7[1] + " " + test7[2] + " " + test7[3] + " " + test7[4]);
+This test case was used to make sure that the function could properly handle shifting more elements than the size of the array.
+Since it works and outputs 5 "testing"'s, I know that shiftLeft works when amount > n.
+
+string test8[5] = {"I", "really", "hope", "this", "works"};
+assert(shiftLeft(test8, 4, 2, "testing") == 2);
+cout << test8[0] + " " + test8[1] + " " + test8[2] + " " + test8[3] + " " + test8[4] << endl;
+assert("hope this testing testing works" == test8[0] + " " + test8[1] + " " + test8[2] + " " + test8[3] + " " + test8[4]);
+This test case was used to make sure the function doesn't alter the last element when n < 5.
+Since it works and outputs "hope this testing testing works", I know that shiftLeft works when n < the array's size.
