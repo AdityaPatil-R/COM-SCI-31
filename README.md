@@ -1,7 +1,7 @@
 # COM SCI 31
 Instructor: Bruce Huang\
 Quarter Taken: Winter 2024\
-Final Grade Received: TBD
+Final Grade Received: 96.06% (A)
 
 ## Grades
 | Assignments and Exams                 | Score        | Percentage   |
